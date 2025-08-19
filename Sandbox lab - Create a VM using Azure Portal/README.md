@@ -1,12 +1,16 @@
-#  Azure Lab: Create a Virtual Machine Using the Azure Portal
+# ☁️ Azure Lab: Create a Virtual Machine Using the Azure Portal
 
-## Overview
+## 📘 Overview
 
 In this exercise, we created a Linux-based Virtual Machine (VM) using the Azure Portal. The VM runs Ubuntu and is configured with SSH access. This lab is part of a hands-on exercise to understand how to deploy infrastructure on Microsoft Azure using the web-based portal interface.
+
+---
 
 ## 🛠️ Lab Objective
 
 Deploy a VM named `test-ubuntu-cus-vm` on Azure using the **Azure Portal**, configure basic settings, generate SSH keys, and verify the deployment.
+
+---
 
 ## 🧭 Steps to Create the VM
 
@@ -16,10 +20,15 @@ From the Azure homepage, click on **"Create a resource"**.
 
 ![Create Resource - Portal Homepage](Image%201.%20Create%20Resource%20click%20on%20Portal%20Homepage.png)
 
+---
+
 ### 2. **Search for Virtual Machine**
 
 In the marketplace, search for **"Virtual Machine"**.
 
+![Search VM](Image%202.%20Search%20VM.png)
+
+---
 
 ### 3. **Configure Basic VM Settings**
 
@@ -88,7 +97,7 @@ Monitor deployment progress and navigate to the VM resource once completed.
 
 Once deployed, you can view the VM status and IP address from the **Overview** page.
 
-
+![VM Running](Image%2010.%20VM%20Running.png)
 
 ---
 
@@ -98,3 +107,4 @@ Use the downloaded `.pem` private key and the public IP address shown in the VM'
 
 ```bash
 ssh -i /path/to/test-ubuntu-cus-vm_key.pem <your-username>@<Public-IP>
+
