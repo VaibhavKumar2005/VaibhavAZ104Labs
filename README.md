@@ -1,9 +1,9 @@
 # VaibhavAZ104Labs
 
-AZ-104 Lab 7
+AZ-104 Labs
 Overview
 
-This repository contains screenshots and resources from Lab 7 of the Microsoft Azure AZ-104 certification course.
+This repository contains screenshots and resources from Labs of the Microsoft Azure AZ-104 certification course.
 
 Contents:
 
