@@ -2,112 +2,110 @@
 
 ## 📘 Overview
 
-This lab demonstrates hands-on experience with **Azure Storage services** as part of the **AZ-104: Microsoft Azure Administrator** learning path.  
-The objective of this lab was to explore how Azure Storage can be configured, secured, and integrated with networking features to support real-world enterprise use cases.
+This lab showcases hands-on experience with **Azure Storage services** as part of the  
+**AZ-104: Microsoft Azure Administrator** learning path.
 
-The work focuses on **cost optimization**, **security controls**, **data lifecycle management**, and **network-restricted access** for storage resources.
+The focus of this lab is on designing **secure, cost-efficient, and network-restricted storage solutions** using Azure-native features. It demonstrates how storage accounts can be configured for enterprise use cases involving controlled access, redundancy, and lifecycle automation.
 
-> ⏱️ **Lab duration:** ~50 minutes  
-> 🔧 **Environment:** Azure Portal, Azure Storage, Virtual Network
+> ⏱️ Estimated lab duration: ~50 minutes  
+> ☁️ Platform: Microsoft Azure
 
 ---
 
 ## 🧭 Scenario Context
 
-In a typical enterprise environment, organizations often maintain large volumes of **infrequently accessed data** on-premises. This lab simulates a migration scenario where such data is moved to Azure to:
+Organizations often maintain large volumes of **infrequently accessed data** on-premises.  
+This lab simulates migrating such data to Azure to achieve:
 
-- Reduce storage costs using tiering and lifecycle policies
-- Improve durability and availability using Azure redundancy options
-- Secure access using network-level and identity-based controls
-- Centralize file and blob storage for controlled access
-
----
-
-## 🧩 Azure Services Explored
-
-The following Azure services and features were used in this lab:
-
-- **Azure Storage Account**
-- **Blob Storage**
-- **Azure File Shares**
-- **Lifecycle Management Policies**
-- **Shared Access Signatures (SAS)**
-- **Virtual Networks (VNet)**
-- **Storage Firewalls & Network Rules**
+- Lower storage costs using tiered storage and lifecycle policies
+- Improved durability through Azure redundancy options
+- Strong security using network and access controls
+- Centralized blob and file storage for structured access
 
 ---
 
-## 🔍 Key Implementation Highlights
+## 🧩 Azure Services & Features Demonstrated
 
-### 🔹 Storage Account Configuration
-- Standard performance storage account with **Geo-Redundant Storage (GRS)** for high availability
-- Public network access disabled to reduce exposure
-- Firewall rules configured to allow access only from trusted networks and client IPs
+- Azure Storage Account
+- Blob Storage
+- Azure File Shares
+- Lifecycle Management Policies
+- Shared Access Signatures (SAS)
+- Virtual Networks (VNet)
+- Storage Firewall & Network Rules
 
-### 🔹 Data Lifecycle Management
-- Lifecycle rule configured to automatically move blobs to a cooler access tier after 30 days
-- Demonstrates cost optimization for infrequently accessed data
+---
+
+## 🔍 Implementation Highlights
+
+### 🔹 Storage Account Design
+- Standard performance storage account
+- Geo-redundant storage (GRS) for resilience
+- Public access disabled to minimize exposure
+- Network rules applied to allow only trusted access
+
+### 🔹 Lifecycle Management
+- Automated policy to move blobs to a cooler tier after 30 days
+- Demonstrates cost optimization for long-term data retention
 
 ### 🔹 Secure Blob Storage
-- Private blob container configuration
-- Retention policy applied for data governance
-- Use of **Shared Access Signature (SAS)** to validate controlled, time-bound access
+- Private blob containers
+- Retention policy for governance
+- SAS tokens used to validate controlled, time-bound access
 
-### 🔹 Azure File Storage with Network Restriction
+### 🔹 Azure File Storage with Network Isolation
 - Azure File Share created for centralized file access
-- Backup disabled to reduce unnecessary cost for this scenario
-- Storage access restricted to a **Virtual Network**, ensuring private connectivity
+- Backup disabled for cost control in this scenario
+- Access restricted to a Virtual Network only
 
 ---
 
-## 📸 Visual Evidence (Screenshots)
+## 📸 Visual Evidence
 
-The screenshots below capture key stages of the implementation and configuration.
-
-### Storage Account & Network Configuration
-![01 Search Storage Accounts](01. Search Storage Accounts.png)
-![02 Create Storage Accounts](02. Create Storage Accounts.png)
-![03 Specify Basics](03. Specify Basics.png)
-![04 Public Network Disabled](04. Public Network Disabled.png)
-![05 Specify Network Settings](05. Specify Network Settings.png)
-![06 Create and Deploy](06. Create and Deploy.png)
-![08 Reaching on Networking](08. Reaching on Networking.png)
-![09 Disable Public Networks](09. Disable public Networks.png)
-![10 Checking Redundancy](10. Checking Redundancy.png)
+### Storage Account & Networking
+![Search storage accounts](./01-search-storage-accounts.png)
+![Create storage account](./02-create-storage-account.png)
+![Specify basics](./03-specify-basics.png)
+![Public network disabled](./04-public-network-disabled.png)
+![Specify network settings](./05-specify-network-settings.png)
+![Create and deploy](./06-create-and-deploy.png)
+![Reach networking](./08-reach-networking.png)
+![Disable public networks](./09-disable-public-networks.png)
+![Check redundancy](./10-checking-redundancy.png)
 
 ### Lifecycle Management
-![11 Lifecycle Management](11. Lifestyle Management.png)
-![12 Adding Rule on Lifecycle Management](12. Adding Rule on Lifestyle Management.png)
+![Lifecycle management](./11-lifecycle-management.png)
+![Add lifecycle rule](./12-add-lifecycle-rule.png)
 
 ### Blob Storage & Access Control
-![13 Base Blob](13. Base Blob.png)
-![14 Clicking on Access Policy](14. Clicking on Access Policy.png)
-![15 Data Container](15. Data Container.png)
-![16 Generate Access Key](16. Click On Generate Access Key.png)
-![17 Generating SAS Key](17. Generating SAS Key for the image uploaded.png)
+![Base blob](./13-base-blob.png)
+![Access policy](./14-access-policy.png)
+![Data container](./15-data-container.png)
+![Generate access key](./16-generate-access-key.png)
+![Generate SAS](./17-generate-sas.png)
 
 ### Azure File Share & Virtual Network
-![18 New File Share](18. New File Share.png)
-![19 Disable Backup](19. Disable Backup.png)
-![20 Selecting VNet](20. Selecting VNet.png)
-![21 Creating VNet Basics](21. Creating VNet basics.png)
-![22 Creating and Deploying VNet](22. Creating and Deploying VNet.png)
+![New file share](./18-new-file-share.png)
+![Disable backup](./19-disable-backup.png)
+![Select VNet](./20-selecting-vnet.png)
+![Create VNet basics](./21-create-vnet-basics.png)
+![Create and deploy VNet](./22-create-deploy-vnet.png)
 
 ---
 
-## 🧠 Key Takeaways
+## 🧠 Key Learnings
 
-- Azure Storage provides granular control over **security, cost, and access**
-- Lifecycle policies are essential for managing long-term storage costs
-- Network-based access restrictions significantly improve storage security
-- SAS tokens enable temporary and scoped access without exposing credentials
-- Integrating storage with VNets aligns with enterprise security best practices
+- Azure Storage provides fine-grained control over security and access
+- Lifecycle policies are essential for long-term cost optimization
+- Network-level restrictions significantly reduce attack surface
+- SAS tokens allow secure sharing without exposing credentials
+- Storage integration with VNets aligns with enterprise security practices
 
 ---
 
 ## 🧹 Resource Cleanup
 
-All resources created during this lab were deleted after completion to avoid ongoing costs.
+All resources created during this lab were removed after completion to prevent unnecessary costs.
 
 ```powershell
 # PowerShell
@@ -115,4 +113,3 @@ Remove-AzResourceGroup -Name az104-rg7
 
 # Azure CLI
 az group delete --name az104-rg7
-
