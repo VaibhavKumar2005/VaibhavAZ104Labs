@@ -34,17 +34,18 @@ Your organization stores infrequently accessed data on-premises. To optimize sto
 3. Configure **lifecycle management**:
    - Create rule `Movetocool` to move blobs after 30 days
 
-📸 **Related screenshots**:
-- `1. Search Storage Accounts.png`
-- `2. Create Storage Accounts.png`
-- `3. Specify Basics.png`
-- `4. Public Network Disabled.png`
-- `5. Specify Network Settings.png`
-- `6. Create and Deploy.png`
-- `10. Checking Redundancy.png`
-- `11. Lifestyle Management.png`
-- `12. Adding Rule on Lifestyle Management.png`
-
+📸 **Related Screenshots**
+![01 Search Storage Accounts](01. Search Storage Accounts.png)
+![02 Create Storage Accounts](02. Create Storage Accounts.png)
+![03 Specify Basics](03. Specify Basics.png)
+![04 Public Network Disabled](04. Public Network Disabled.png)
+![05 Specify Network Settings](05. Specify Network Settings.png)
+![06 Create and Deploy](06. Create and Deploy.png)
+![08 Reaching on Networking](08. Reaching on Networking.png)
+![09 Disable Public Networks](09. Disable public Networks.png)
+![10 Checking Redundancy](10. Checking Redundancy.png)
+![11 Lifecycle Management](11. Lifestyle Management.png)
+![12 Adding Rule on Lifecycle Management](12. Adding Rule on Lifestyle Management.png)
 ---
 
 ### **Task 2: Create and Configure Secure Blob Storage**
@@ -57,11 +58,11 @@ Your organization stores infrequently accessed data on-premises. To optimize sto
 4. **Verify access** using Blob SAS URL.
 
 📸 **Related screenshots**:
-- `13. Base Blob.png`
-- `14. Clicking on Access Policy.png`
-- `15. Data Container.png`
-- `16. Click On Generate Accesss Key.png`
-- `17. Generating SAS Key for the image uploaded.png`
+![13 Base Blob](13. Base Blob.png)
+![14 Clicking on Access Policy](14. Clicking on Access Policy.png)
+![15 Data Container](15. Data Container.png)
+![16 Generate Access Key](16. Click On Generate Access Key.png)
+![17 Generating SAS Key](17. Generating SAS Key for the image uploaded.png)
 
 ---
 
@@ -72,11 +73,11 @@ Your organization stores infrequently accessed data on-premises. To optimize sto
 4. **Restrict access** to storage from a **virtual network** only
 
 📸 **Related screenshots**:
-- `18. New File Share.png`
-- `19. Disable Backup.png`
-- `20. Selecting VNet.png`
-- `21. Creating VNet basics.png`
-- `22. Creating and Deploying VNet.png`
+![18 New File Share](18. New File Share.png)
+![19 Disable Backup](19. Disable Backup.png)
+![20 Selecting VNet](20. Selecting VNet.png)
+![21 Creating VNet Basics](21. Creating VNet basics.png)
+![22 Creating and Deploying VNet](22. Creating and Deploying VNet.png)
 
 ---
 
