@@ -1,40 +1,70 @@
-# Lab 07 - Managing Azure Storage
+# Lab 07 – Managing Azure Storage (AZ-104)
 
-## 📘 Lab Overview
+## 📘 Overview
 
-In this lab, you will learn to:
-- Create and configure Azure storage accounts
-- Secure blob containers with access policies and lifecycle rules
-- Create and manage Azure File shares
-- Restrict storage access to a virtual network
+This lab demonstrates hands-on experience with **Azure Storage services** as part of the **AZ-104: Microsoft Azure Administrator** learning path.  
+The objective of this lab was to explore how Azure Storage can be configured, secured, and integrated with networking features to support real-world enterprise use cases.
 
-> ⏱️ **Estimated time:** 50 minutes
+The work focuses on **cost optimization**, **security controls**, **data lifecycle management**, and **network-restricted access** for storage resources.
 
----
-
-## 🧭 Lab Scenario
-
-Your organization stores infrequently accessed data on-premises. To optimize storage costs and explore security, redundancy, and network restrictions, you will use Azure Storage to:
-- Migrate data to blob and file storage
-- Apply lifecycle policies
-- Use virtual networks for secure access
+> ⏱️ **Lab duration:** ~50 minutes  
+> 🔧 **Environment:** Azure Portal, Azure Storage, Virtual Network
 
 ---
 
-## 🛠️ Tasks
+## 🧭 Scenario Context
 
-### **Task 1: Create and Configure a Storage Account**
-1. **Create storage account** with the following:
-   - **Performance**: Standard
-   - **Redundancy**: Geo-redundant storage (GRS)
-   - **Public access**: Disabled
-2. Configure **firewall settings**:
-   - Enable access from selected networks only
-   - Add client IP
-3. Configure **lifecycle management**:
-   - Create rule `Movetocool` to move blobs after 30 days
+In a typical enterprise environment, organizations often maintain large volumes of **infrequently accessed data** on-premises. This lab simulates a migration scenario where such data is moved to Azure to:
 
-📸 **Related Screenshots**
+- Reduce storage costs using tiering and lifecycle policies
+- Improve durability and availability using Azure redundancy options
+- Secure access using network-level and identity-based controls
+- Centralize file and blob storage for controlled access
+
+---
+
+## 🧩 Azure Services Explored
+
+The following Azure services and features were used in this lab:
+
+- **Azure Storage Account**
+- **Blob Storage**
+- **Azure File Shares**
+- **Lifecycle Management Policies**
+- **Shared Access Signatures (SAS)**
+- **Virtual Networks (VNet)**
+- **Storage Firewalls & Network Rules**
+
+---
+
+## 🔍 Key Implementation Highlights
+
+### 🔹 Storage Account Configuration
+- Standard performance storage account with **Geo-Redundant Storage (GRS)** for high availability
+- Public network access disabled to reduce exposure
+- Firewall rules configured to allow access only from trusted networks and client IPs
+
+### 🔹 Data Lifecycle Management
+- Lifecycle rule configured to automatically move blobs to a cooler access tier after 30 days
+- Demonstrates cost optimization for infrequently accessed data
+
+### 🔹 Secure Blob Storage
+- Private blob container configuration
+- Retention policy applied for data governance
+- Use of **Shared Access Signature (SAS)** to validate controlled, time-bound access
+
+### 🔹 Azure File Storage with Network Restriction
+- Azure File Share created for centralized file access
+- Backup disabled to reduce unnecessary cost for this scenario
+- Storage access restricted to a **Virtual Network**, ensuring private connectivity
+
+---
+
+## 📸 Visual Evidence (Screenshots)
+
+The screenshots below capture key stages of the implementation and configuration.
+
+### Storage Account & Network Configuration
 ![01 Search Storage Accounts](01. Search Storage Accounts.png)
 ![02 Create Storage Accounts](02. Create Storage Accounts.png)
 ![03 Specify Basics](03. Specify Basics.png)
@@ -44,35 +74,19 @@ Your organization stores infrequently accessed data on-premises. To optimize sto
 ![08 Reaching on Networking](08. Reaching on Networking.png)
 ![09 Disable Public Networks](09. Disable public Networks.png)
 ![10 Checking Redundancy](10. Checking Redundancy.png)
+
+### Lifecycle Management
 ![11 Lifecycle Management](11. Lifestyle Management.png)
 ![12 Adding Rule on Lifecycle Management](12. Adding Rule on Lifestyle Management.png)
----
 
-### **Task 2: Create and Configure Secure Blob Storage**
-1. **Create a container** with private access.
-2. **Add retention policy** of 180 days.
-3. **Upload a file** and configure:
-   - **Blob type**: Block blob
-   - **Tier**: Hot
-   - **Folder**: `securitytest`
-4. **Verify access** using Blob SAS URL.
-
-📸 **Related screenshots**:
+### Blob Storage & Access Control
 ![13 Base Blob](13. Base Blob.png)
 ![14 Clicking on Access Policy](14. Clicking on Access Policy.png)
 ![15 Data Container](15. Data Container.png)
 ![16 Generate Access Key](16. Click On Generate Access Key.png)
 ![17 Generating SAS Key](17. Generating SAS Key for the image uploaded.png)
 
----
-
-### **Task 3: Create and Configure Azure File Storage**
-1. **Create a file share** named `share1`
-2. **Disable backup**
-3. **Upload a file** using Storage Browser
-4. **Restrict access** to storage from a **virtual network** only
-
-📸 **Related screenshots**:
+### Azure File Share & Virtual Network
 ![18 New File Share](18. New File Share.png)
 ![19 Disable Backup](19. Disable Backup.png)
 ![20 Selecting VNet](20. Selecting VNet.png)
@@ -81,9 +95,19 @@ Your organization stores infrequently accessed data on-premises. To optimize sto
 
 ---
 
-## 🧹 Cleanup
+## 🧠 Key Takeaways
 
-After completing the lab, delete the resource group to avoid ongoing charges.
+- Azure Storage provides granular control over **security, cost, and access**
+- Lifecycle policies are essential for managing long-term storage costs
+- Network-based access restrictions significantly improve storage security
+- SAS tokens enable temporary and scoped access without exposing credentials
+- Integrating storage with VNets aligns with enterprise security best practices
+
+---
+
+## 🧹 Resource Cleanup
+
+All resources created during this lab were deleted after completion to avoid ongoing costs.
 
 ```powershell
 # PowerShell
@@ -91,3 +115,4 @@ Remove-AzResourceGroup -Name az104-rg7
 
 # Azure CLI
 az group delete --name az104-rg7
+
